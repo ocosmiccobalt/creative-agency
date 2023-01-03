@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agency Creative</title>
+    <meta name="description" content="Agency Creative: SMM, SEO, design, ads">
+  </head>
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
+    <header class="page-header">
+      <div class="page-header__wrapper wrapper">
+        <a class="logo logo--header">
+          <svg class="logo__image" width="136" height="50" role="img" aria-label="Agency Creative Logo" focusable="false">
+            <use xlink:href="#logo-group" aria-hidden="true"></use>
+          </svg>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary">
+          <button class="main-nav__toggle main-nav__toggle--nojs" type="button" aria-controls="site-list">
+            <span class="visually-hidden">Меню</span>
+          </button>
+          <ul class="main-nav__list site-list site-list--nojs" id="site-list" role="list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="#home">Home</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#about">About</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#services">Services</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="#portfolio">Projects</a>
+            </li>
+          </ul>
+
+          <a class="main-nav__button button button--transparent" href="#collaboration">Contact us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro" id="home">
+        <div class="intro__wrapper wrapper">
+          <h1 class="visually-hidden">Creative Agency for Your Business</h1>
+          <p class="intro__tagline">Make your dream business goal come true</p>
+          <p class="intro__description">When you need us for improve your business, then come with us to help your business have reach it, you just sit and feel that goal</p>
+          <a class="intro__button button" href="#" data-replace-with-button>Start Project</a>
+          <div class="intro__inner">
+            <figure class="intro__illustration">
+              <figcaption class="intro__rating rating">
+                <svg class="rating__icon" width="24" height="24" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-star"></use>
+                </svg>
+                <span class="rating__quality">Great Project</span>
+                <span class="rating__amount">800+ Done</span>
+              </figcaption>
+              <p class="intro__hero">
+                <picture>
+                  <source type="image/avif" media="(min-width: 48rem)" srcset="img/hero-desktop@1x.avif 1x, img/hero-desktop@2x.avif 2x">
+                  <source type="image/avif" srcset="img/hero-mobile@1x.avif 1x, img/hero-mobile@2x.avif 2x">
+
+                  <source type="image/webp" media="(min-width: 48rem)" srcset="img/hero-desktop@1x.webp 1x, img/hero-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/hero-mobile@1x.webp 1x, img/hero-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 48rem)" srcset="img/hero-desktop@1x.jpg 1x, img/hero-desktop@2x.jpg 2x">
+                  <img class="intro__image" src="img/hero-mobile@1x.jpg" srcset="img/hero-mobile@2x.jpg 2x" alt="Three girls are sitting at a table with laptops and notepads and discussing a new joint project.">
+                </picture>
+              </p>
+            </figure>
+            <figure class="intro__review review review--figure review--small">
+              <figcaption class="review__author">
+                <p class="review__name">Bill Adams</p>
+                <p class="review__business">CEO UpTech</p>
+                <p class="review__avatar">
+                  <picture>
+                    <source type="image/avif" media="(min-width: 48rem)" srcset="img/avatar-bill-adams-desktop@1x.avif 1x, img/avatar-bill-adams-desktop@2x.avif 2x">
+                    <source type="image/avif" srcset="img/avatar-bill-adams-mobile@1x.avif 1x, img/avatar-bill-adams-mobile@2x.avif 2x">
+
+                    <source type="image/webp" media="(min-width: 48rem)" srcset="img/avatar-bill-adams-desktop@1x.webp 1x, img/avatar-bill-adams-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/avatar-bill-adams-mobile@1x.webp 1x, img/avatar-bill-adams-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 48rem)" srcset="img/avatar-bill-adams-desktop@1x.png 1x, img/avatar-bill-adams-desktop@2x.png 2x">
+                    <img class="review__image" src="img/avatar-bill-adams-mobile@1x.png" srcset="img/avatar-bill-adams-mobile@2x.png 2x" alt="Bill Adams, his avatar.">
+                  </picture>
+                </p>
+              </figcaption>
+              <blockquote class="review__blockquote">
+                <p class="review__text">“ This team is really the best in its field, I don't regret working with them, and will come back again thanks “</p>
+              </blockquote>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="about__wrapper wrapper">
+          <h2 class="about__title">About Us</h2>
+          <p class="about__subtitle">Our Teammate</p>
+          <p class="about__illustration">
+            <picture>
+              <source type="image/avif" media="(min-width: 48rem)" srcset="img/about-desktop@1x.avif 1x, img/about-desktop@2x.avif 2x">
+              <source type="image/avif" srcset="img/about-mobile@1x.avif 1x, img/about-mobile@2x.avif 2x">
+
+              <source type="image/webp" media="(min-width: 48rem)" srcset="img/about-desktop@1x.webp 1x, img/about-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/about-mobile@1x.webp 1x, img/about-mobile@2x.webp 2x">
+
+              <source media="(min-width: 48rem)" srcset="img/about-desktop@1x.jpg 1x, img/about-desktop@2x.jpg 2x">
+              <img class="about__image" src="img/about-mobile@1x.jpg" srcset="img/about-mobile@2x.jpg 2x" alt="Team of four discussing strategy.">
+            </picture>
+          </p>
+          <div class="about__inner">
+            <p class="about__description">We move with make a Creative Strategy for help your business goal, we help to improve your income by a services we have. make your content look interesting and make people look for your business</p>
+            <p class="about__description">We move with make a Creative Strategy for help your business goal, we help to improve your income by a services we have. make your content look interesting and make people look for your business</p>
+            <a class="about__button button" href="#" data-replace-with-button>About Us</a>
+            <a class="about__button button button--transparent" href="#" data-replace-with-button>
+              <svg class="button__icon" width="24" height="24" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-play"></use>
+              </svg>
+              <span class="button__text">Our Story</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="services__wrapper wrapper">
+          <div class="services__inner">
+            <h2 class="services__title">Our Services</h2>
+            <p class="services__subtitle">Perfect and Fast Movement</p>
+            <p class="services__description">We move with make a Creative Strategy for help your business goal, we help to improve your income by a services we have. make your content look interesting and make people look for your business</p>
+            <a class="services__more" href="#">
+              Read more
+              <svg class="services__arrow-right" width="42" height="42" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+          <ul class="services__list" role="list">
+            <li class="services__item">
+              <a class="services__link" href="#">
+                <svg class="services__icon" width="42" height="42" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-monitor"></use>
+                </svg>
+                <span class="services__name">Social Media Management</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#">
+                <svg class="services__icon" width="42" height="42" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-settings"></use>
+                </svg>
+                <span class="services__name">Search Engine Opimization</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#">
+                <svg class="services__icon" width="42" height="42" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-pen-tool"></use>
+                </svg>
+                <span class="services__name">Design</span>
+              </a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#">
+                <svg class="services__icon" width="42" height="42" aria-hidden="true" focusable="false">
+                  <use xlink:href="#icon-tv"></use>
+                </svg>
+                <span class="services__name">Ads</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <div class="portfolio__wrapper wrapper">
+          <h2 class="portfolio__title">Our Portfolio</h2>
+          <p class="portfolio__subtitle">What do we do</p>
+          <p class="portfolio__description">All projects that we have already done, proven can help to use more comfortable, then can used by client from our business</p>
+          <ul class="portfolio__list" role="list">
+            <li class="portfolio__item">
+              <a class="portfolio__link" href="#">Design Furniture App</a>
+            </li>
+            <li class="portfolio__item">
+              <a class="portfolio__link" href="#">Cloud App</a>
+            </li>
+            <li class="portfolio__item">
+              <a class="portfolio__link" href="#">Design Byte App</a>
+            </li>
+          </ul>
+          <a class="portfolio__button button button--transparent" href="#">See All Portfolio</a>
+        </div>
+      </section>
+
+      <section class="testimonial">
+        <div class="testimonial__wrapper wrapper">
+          <h2 class="testimonial__title">Testimonial</h2>
+          <p class="testimonial__subtitle">People Talk about us</p>
+          <ul class="testimonial__list" role="list">
+            <li class="testimonial__item">
+              <div class="review">
+                <div class="review__author">
+                  <p class="review__name">Angel Rose</p>
+                  <p class="review__business">Creative Manager</p>
+                  <p class="review__avatar">
+                    <picture>
+                      <source type="image/avif" srcset="img/avatar-angel-rose@1x.avif 1x, img/avatar-angel-rose@2x.avif 2x">
+
+                      <source type="image/webp" srcset="img/avatar-angel-rose@1x.webp 1x, img/avatar-angel-rose@2x.webp 2x">
+
+                      <img class="review__image" src="img/avatar-angel-rose@1x.png" srcset="img/avatar-angel-rose@2x.png 2x" alt="Angel Rose, her avatar.">
+                    </picture>
+                  </p>
+                </div>
+                <blockquote class="review__blockquote">
+                  <p class="review__text">There are many variations passages of Lorem Ipsum majority some by words which don't look.</p>
+                </blockquote>
+              </div>
+            </li>
+            <li class="testimonial__item">
+              <div class="review">
+                <div class="review__author">
+                  <p class="review__name">Angel Rose</p>
+                  <p class="review__business">Creative Manager</p>
+                  <p class="review__avatar">
+                    <picture>
+                      <source type="image/avif" srcset="img/avatar-angel-rose@1x.avif 1x, img/avatar-angel-rose@2x.avif 2x">
+
+                      <source type="image/webp" srcset="img/avatar-angel-rose@1x.webp 1x, img/avatar-angel-rose@2x.webp 2x">
+
+                      <img class="review__image" src="img/avatar-angel-rose@1x.png" srcset="img/avatar-angel-rose@2x.png 2x" alt="Angel Rose, her avatar.">
+                    </picture>
+                  </p>
+                </div>
+                <blockquote class="review__blockquote">
+                  <p class="review__text">There are many variations passages of Lorem Ipsum majority some by words which don't look.</p>
+                </blockquote>
+              </div>
+            </li>
+            <li class="testimonial__item">
+              <div class="review">
+                <div class="review__author">
+                  <p class="review__name">Angel Rose</p>
+                  <p class="review__business">Creative Manager</p>
+                  <p class="review__avatar">
+                    <picture>
+                      <source type="image/avif" srcset="img/avatar-angel-rose@1x.avif 1x, img/avatar-angel-rose@2x.avif 2x">
+
+                      <source type="image/webp" srcset="img/avatar-angel-rose@1x.webp 1x, img/avatar-angel-rose@2x.webp 2x">
+
+                      <img class="review__image" src="img/avatar-angel-rose@1x.png" srcset="img/avatar-angel-rose@2x.png 2x" alt="Angel Rose, her avatar.">
+                    </picture>
+                  </p>
+                </div>
+                <blockquote class="review__blockquote">
+                  <p class="review__text">There are many variations passages of Lorem Ipsum majority some by words which don't look.</p>
+                </blockquote>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="collaboration" id="collaboration">
+        <div class="collaboration__wrapper wrapper">
+          <div class="collaboration__inner">
+            <h2 class="collaboration__title">Interesting Collaboration With Us?</h2>
+            <p class="collaboration__description">Help you to reach your business goal</p>
+            <a class="collaboration__button button" href="#" data-replace-with-button>Get Started</a>
+          </div>
+        </div>
+        <div class="collaboration__inner collaboration__inner--img">
+          <p class="collaboration__illustration">
+            <picture>
+              <source type="image/avif" media="(min-width: 48rem)" srcset="img/collaboration-1-desktop@1x.avif 1x, img/collaboration-1-desktop@2x.avif 2x">
+              <source type="image/avif" srcset="img/collaboration-1-mobile@1x.avif 1x, img/collaboration-1-mobile@2x.avif 2x">
+
+              <source type="image/webp" media="(min-width: 48rem)" srcset="img/collaboration-1-desktop@1x.webp 1x, img/collaboration-1-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/collaboration-1-mobile@1x.webp 1x, img/collaboration-1-mobile@2x.webp 2x">
+
+              <source media="(min-width: 48rem)" srcset="img/collaboration-1-desktop@1x.jpg 1x, img/collaboration-1-desktop@2x.jpg 2x">
+              <img class="collaboration__image" src="img/collaboration-1-mobile@1x.jpg" srcset="img/collaboration-1-mobile@2x.jpg 2x" alt="People rejoice in a mutually beneficial agreement: That's a bargain!">
+            </picture>
+          </p>
+          <p class="collaboration__illustration">
+            <picture>
+              <source type="image/avif" media="(min-width: 48rem)" srcset="img/collaboration-2-desktop@1x.avif 1x, img/collaboration-2-desktop@2x.avif 2x">
+              <source type="image/avif" srcset="img/collaboration-2-mobile@1x.avif 1x, img/collaboration-2-mobile@2x.avif 2x">
+
+              <source type="image/webp" media="(min-width: 48rem)" srcset="img/collaboration-2-desktop@1x.webp 1x, img/collaboration-2-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/collaboration-2-mobile@1x.webp 1x, img/collaboration-2-mobile@2x.webp 2x">
+
+              <source media="(min-width: 48rem)" srcset="img/collaboration-2-desktop@1x.jpg 1x, img/collaboration-2-desktop@2x.jpg 2x">
+              <img class="collaboration__image" src="img/collaboration-2-mobile@1x.jpg" srcset="img/collaboration-2-mobile@2x.jpg 2x" alt="A person speaks to the audience in a relaxed atmosphere.">
+            </picture>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper wrapper">
+        <a class="logo logo--footer">
+          <svg class="logo__image" width="136" height="50" role="img" aria-label="Agency Creative Logo" focusable="false">
+            <use xlink:href="#logo-group" aria-hidden="true"></use>
+          </svg>
+        </a>
+
+        <div class="page-footer__inner">
+          <section class="page-footer__section">
+            <h2 class="page-footer__title">Terms & policies</h2>
+            <ul class="page-footer__list" role="list">
+              <li class="page-footer__item">
+                <a class="page-footer__link" href="#">Terms of Service</a>
+              </li>
+              <li class="page-footer__item">
+                <a class="page-footer__link" href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="page-footer__section">
+            <h2 class="page-footer__title" id="footer-company">Company</h2>
+            <nav class="page-footer__nav" aria-labelledby="footer-company">
+              <ul class="page-footer__list" role="list">
+                <li class="page-footer__item">
+                  <a class="page-footer__link" href="#home">Home</a>
+                </li>
+                <li class="page-footer__item">
+                  <a class="page-footer__link" href="#about">About Us</a>
+                </li>
+                <li class="page-footer__item">
+                  <a class="page-footer__link" href="#collaboration">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+
+          <section class="page-footer__section">
+            <h2 class="page-footer__title">Contact</h2>
+            <dl class="page-footer__list" role="list">
+              <div class="page-footer__item">
+                <dt class="visually-hidden">Call</dt>
+                <dd class="page-footer__detail">
+                  <a class="page-footer__link" href="tel:+62893912392190">(+62) 893912392190</a>
+                </dd>
+              </div>
+              <div class="page-footer__item">
+                <dt class="visually-hidden">Email</dt>
+                <dd class="page-footer__detail">
+                  <a class="page-footer__link" href="mailto:agecnycr@gmail.com">agencycr@gmail.com</a>
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="page-footer__section">
+            <h2 class="page-footer__title">Location</h2>
+            <p class="page-footer__location">
+              PT Osiris Real Estate International <br>
+              Jl. KH. Wahid Hasyim Kel No.10D <br>
+              Jakarta, Indonesia <br>
+              team@OsirisRealEstate.com
+            </p>
+          </section>
+        </div>
+
+        <ul class="page-footer__socials socials" role="list">
+          <li class="socials__item">
+            <a class="socials__link" rel="noopener noreferrer" href="https://www.facebook.com" target="_blank">
+              <span class="visually-hidden">Facebook</span>
+              <svg class="socials__icon socials__icon--facebook" width="24" height="24" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" rel="noopener noreferrer" href="https://www.instagram.com" target="_blank">
+              <span class="visually-hidden">Instagram</span>
+              <svg class="socials__icon socials__icon--instagram" width="24" height="25" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" rel="noopener noreferrer" href="https://www.linkedin.com" target="_blank">
+              <span class="visually-hidden">Linkedin</span>
+              <svg class="socials__icon socials__icon--linkedin" width="24" height="25" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="mailto:agecnycr@gmail.com">
+              <span class="visually-hidden">Mail</span>
+              <svg class="socials__icon socials__icon--mail" width="24" height="25" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" rel="noopener noreferrer" href="https://twitter.com" target="_blank">
+              <span class="visually-hidden">Twitter</span>
+              <svg class="socials__icon socials__icon--twitter" width="24" height="25" aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <p class="page-footer__copyright">Copyright @ 2023 Agency Creative. All Right Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
