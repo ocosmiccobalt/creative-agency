@@ -4,7 +4,10 @@
   "private": true,
   "description": "Agency Creative Page",
   "scripts": {
-    "editorconfig": "editorconfig-cli"
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\"",
+    "eslint": "eslint source/js/",
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint"
   },
   "browserslist": [
     "last 2 versions",
