@@ -1,0 +1,93 @@
+@use "sass:color";
+
+/* Color vars */
+
+/* (a) main colors*/
+
+$white: hsl(0, 0%, 100%);
+
+$black: hsl(0, 0%, 11%);
+
+$grey: hsl(0, 0%, 27%);
+
+$brand-blue: hsl(219, 100%, 61%);
+
+$darker-black: hsl(0, 0%, 5%);
+
+$lighter-grey: hsl(0, 0%, 89%);
+
+$ultra-dark-blue: hsl(216, 31%, 6%);
+
+$full-black: hsl(0, 0%, 0%);
+
+$darker-grey: hsl(300, 2%, 22%);
+
+/* (b) decorative circles */
+
+$faded-brand-blue: color.adjust($brand-blue, $lightness: 2%, $alpha: -0.2);
+
+$rose: hsl(0, 100%, 78%);
+
+/* (c) decorative circles & polka dots */
+
+$red: hsl(0, 92%, 55%);
+
+/* (d) polka dots */
+
+$blue: hsl(223, 100%, 52%);
+
+$orange: hsl(22, 100%, 50%);
+
+$fuchsia: hsl(295, 100%, 50%);
+
+/* (e) star */
+
+$gold: hsl(42, 93%, 60%);
+
+/* (f) icons for services */
+
+$red-icon-fill: hsl(0, 100%, 59%);
+
+$gold-icon-fill: hsl(40, 100%, 50%);
+
+$green-icon-fill: hsl(108, 73%, 64%);
+
+/* Color scheme vars */
+
+$light-body-bg: $white;
+$light-heavy-text: $black;
+$light-faint-text: $grey;
+$light-primary-color: $brand-blue;
+$light-border: color.change($full-black, $alpha: 0.1);
+$light-alt-bg: transparent;
+$light-portfolio-overlay: color.change($full-black, $alpha: 0.15);
+$light-testimonial-box-shadow: color.change($full-black, $alpha: 0.05);
+$light-footer-contrast: $white;
+
+$dark-body-bg: $darker-black;
+$dark-heavy-text: $lighter-grey;
+$dark-faint-text: $lighter-grey;
+$dark-primary-color: $lighter-grey;
+$dark-border: color.change($white, $alpha: 0.1);
+$dark-alt-bg: $ultra-dark-blue;
+$dark-portfolio-overlay: color.change($white, $alpha: 0.15);
+$dark-testimonial-box-shadow: color.change(hsl(0, 0%, 64%), $alpha: 0.05);
+$dark-footer-contrast: $lighter-grey;
+
+/* Color schemes interchange vars */
+
+$footer-bg: $darker-grey;
+$button-box-shadow: color.change($brand-blue, $alpha: 0.5);
+$intro-box-shadow: color.change($full-black, $alpha: 0.15);
+$services-box-shadow: color.change($full-black, $alpha: 0.1);
+
+/* Other vars */
+
+$tablet-width: 48rem;
+$desktop-width: 79rem;
+
+$desktop-column-gap: 1.25rem;
+
+/* Georgia is a serif font, but seems to give a closer match than sans-serif web safe fonts */
+$nunito-family: "Nunito", "Nunito-fallback", "Georgia", sans-serif;
+$quicksand-family: "Quicksand", "Quicksand-fallback", "Trebuchet MS", sans-serif;

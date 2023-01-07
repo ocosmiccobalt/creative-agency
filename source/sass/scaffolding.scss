@@ -1,0 +1,157 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("../fonts/nunito-latin-regular.woff2") format("woff2"),
+    url("../fonts/nunito-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../fonts/nunito-latin-700.woff2") format("woff2"),
+    url("../fonts/nunito-latin-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src:
+    url("../fonts/nunito-latin-800.woff2") format("woff2"),
+    url("../fonts/nunito-latin-800.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    url("../fonts/quicksand-latin-300.woff2") format("woff2"),
+    url("../fonts/quicksand-latin-300.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("../fonts/quicksand-latin-regular.woff2") format("woff2"),
+    url("../fonts/quicksand-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url("../fonts/quicksand-latin-600.woff2") format("woff2"),
+    url("../fonts/quicksand-latin-600.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("../fonts/quicksand-latin-700.woff2") format("woff2"),
+    url("../fonts/quicksand-latin-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Nunito-fallback";
+  size-adjust: 101.48999999999997%;
+  ascent-override: 110%;
+  src: local("Arial");
+}
+
+@font-face {
+  font-family: "Quicksand-fallback";
+  size-adjust: 104.37%;
+  ascent-override: 90%;
+  src: local("Arial");
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 20rem;
+  margin: 0;
+  padding: 0;
+
+  font-family: $quicksand-family;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  color: var(--faint-text, #{$light-faint-text});
+  -webkit-font-smoothing: antialiased;
+
+  @include break-word();
+
+  background-color: var(--body-bg, #{$light-body-bg});
+}
+
+@media (min-width: $desktop-width) {
+  body {
+    font-size: 1.25rem;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@media (min-width: $desktop-width) {
+  .wrapper {
+    max-width: $desktop-width;
+    margin: 0 auto;
+  }
+}

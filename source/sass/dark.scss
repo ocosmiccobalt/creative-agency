@@ -1,0 +1,38 @@
+@use "sass:color";
+@use "variables" as *;
+
+:root {
+  --body-bg: #{$dark-body-bg};
+
+  --heavy-text: #{$dark-heavy-text};
+
+  --faint-text: #{$dark-faint-text};
+
+  --primary-color: #{$dark-primary-color};
+
+  --border: #{$dark-border};
+
+  --alt-bg: #{$dark-alt-bg};
+
+  --portfolio-overlay: #{$dark-portfolio-overlay};
+
+  --testimonial-box-shadow: #{$dark-testimonial-box-shadow};
+
+  --footer-contrast: #{$dark-footer-contrast};
+
+  --red: #{color.adjust($red, $lightness: 5%)};
+
+  --orange: #{color.adjust($orange, $lightness: 5%)};
+
+  --fuchsia: #{color.adjust($fuchsia, $lightness: 5%)};
+
+  --blue: #{color.adjust($blue, $lightness: 5%)};
+
+  --gold: #{color.adjust($gold, $lightness: 5%)};
+
+  --red-icon-fill: #{color.adjust($red-icon-fill, $lightness: 5%)};
+
+  --gold-icon-fill: #{color.adjust($gold-icon-fill, $lightness: 5%)};
+
+  --green-icon-fill: #{color.adjust($green-icon-fill, $lightness: 5%)};
+}

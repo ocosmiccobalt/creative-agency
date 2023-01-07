@@ -1,0 +1,37 @@
+@use "variables" as *;
+
+:root {
+  --body-bg: #{$light-body-bg};
+
+  --heavy-text: #{$light-heavy-text};
+
+  --faint-text: #{$light-faint-text};
+
+  --primary-color: #{$light-primary-color};
+
+  --border: #{$light-border};
+
+  --alt-bg: #{$light-alt-bg};
+
+  --portfolio-overlay: #{$light-portfolio-overlay};
+
+  --testimonial-box-shadow: #{$light-testimonial-box-shadow};
+
+  --footer-contrast: #{$light-footer-contrast};
+
+  --red: #{$red};
+
+  --orange: #{$orange};
+
+  --fuchsia: #{$fuchsia};
+
+  --blue: #{$blue};
+
+  --gold: #{$gold};
+
+  --red-icon-fill: #{$red-icon-fill};
+
+  --gold-icon-fill: #{$gold-icon-fill};
+
+  --green-icon-fill: #{$green-icon-fill};
+}
