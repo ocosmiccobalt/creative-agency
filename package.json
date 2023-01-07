@@ -7,7 +7,9 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\"",
     "eslint": "eslint source/js/",
-    "test": "npm run editorconfig && npm run stylelint && npm run eslint"
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
+    "build": "gulp",
+    "start": "gulp buildDev && gulp dev"
   },
   "browserslist": [
     "last 2 versions",
