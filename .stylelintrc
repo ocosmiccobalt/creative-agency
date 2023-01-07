@@ -26,6 +26,8 @@
         "/^color/"
       ]
     }],
-    "number-max-precision": 3
+    "number-max-precision": [3, {
+      "ignoreProperties": ["size-adjust"]
+    }]
   }
 }
