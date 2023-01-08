@@ -1,4 +1,5 @@
 import Nav from './nav';
+import replaceAnchorsWithButtons from './util/replaceAnchorsWithButtons';
 
 const work = () => {
   const navElem = document.querySelector(`.main-nav`);
@@ -7,6 +8,8 @@ const work = () => {
     const nav = new Nav(navElem);
     nav.init();
   }
+
+  replaceAnchorsWithButtons();
 };
 
 if (document.readyState === `loading`) {
