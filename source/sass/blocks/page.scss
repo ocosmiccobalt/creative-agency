@@ -1,0 +1,17 @@
+.page {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+@supports (display: grid) {
+  .page {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+
+    height: auto;
+    min-height: 100%;
+  }
+}
