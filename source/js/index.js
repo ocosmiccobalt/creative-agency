@@ -5,7 +5,7 @@ const work = () => {
   const navElem = document.querySelector(`.main-nav`);
 
   if (navElem !== null) {
-    const nav = new Nav(navElem);
+    const nav = new Nav(navElem, `main-nav__toggle`, `site-list`);
     nav.init();
   }
 
