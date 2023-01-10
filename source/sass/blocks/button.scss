@@ -1,0 +1,99 @@
+@use "sass:color";
+@use "variables" as *;
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 10ch;
+  min-height: 3.167em;
+  padding: 0.75em 2.75em 0.833em;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  letter-spacing: inherit;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: top;
+  color: var(--body-bg, #{$light-body-bg});
+
+  border: 0.125rem solid transparent;
+  border-radius: 1.5rem;
+  background-color: var(--primary-color, #{$light-primary-color});
+  box-shadow: 0 0.25rem 0.5rem 0 $button-box-shadow;
+
+  cursor: pointer;
+  transition: 220ms ease-in-out;
+
+  &:hover,
+  &:active {
+    background-color: var(--button-hover, #{$light-button-hover});
+  }
+
+  &:focus {
+    outline: 0.25em solid var(--focus-visible, #{$light-focus-visible});
+    outline-offset: 0.25em;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 0.25em solid var(--focus-visible, #{$light-focus-visible});
+    outline-offset: 0.25em;
+  }
+
+  &[disabled] {
+    background-color: color.change($brand-blue, $saturation: 0%);
+
+    cursor: not-allowed;
+  }
+}
+
+.button--inverted {
+  color: var(--primary-color, #{$light-primary-color});
+
+  border-color: var(--primary-color, #{$light-primary-color});
+  background-color: var(--body-bg, #{$light-body-bg});
+  box-shadow: none;
+
+  &:hover,
+  &:active {
+    color: var(--body-bg, #{$light-body-bg});
+
+    border-color: transparent;
+  }
+}
+
+.button__icon {
+  flex-shrink: 0;
+  flex-basis: auto;
+
+  width: 1.333em;
+  height: 1.333em;
+  margin-right: 0.833em;
+}
+
+.button__text {
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    min-height: 3em;
+    padding: 0.75em 3em;
+
+    font-size: 1rem;
+  }
+
+  .button__icon {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.625em;
+  }
+}
