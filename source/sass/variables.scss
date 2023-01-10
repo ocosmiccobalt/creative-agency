@@ -12,6 +12,8 @@ $grey: hsl(0, 0%, 27%);
 
 $brand-blue: hsl(219, 100%, 61%);
 
+$desaturated-darker-brand-blue: hsl(219, 38%, 42%);
+
 $darker-black: hsl(0, 0%, 5%);
 
 $lighter-grey: hsl(0, 0%, 89%);
@@ -58,7 +60,9 @@ $light-body-bg: $white;
 $light-heavy-text: $black;
 $light-faint-text: $grey;
 $light-primary-color: $brand-blue;
-$light-border: color.change($full-black, $alpha: 0.1);
+$light-focus-visible: $desaturated-darker-brand-blue;
+$light-button-hover: color.scale($brand-blue, $lightness: -20%);
+$light-services-border: color.change($full-black, $alpha: 0.1);
 $light-alt-bg: transparent;
 $light-portfolio-overlay: color.change($full-black, $alpha: 0.15);
 $light-testimonial-box-shadow: color.change($full-black, $alpha: 0.05);
@@ -68,7 +72,9 @@ $dark-body-bg: $darker-black;
 $dark-heavy-text: $lighter-grey;
 $dark-faint-text: $lighter-grey;
 $dark-primary-color: $lighter-grey;
-$dark-border: color.change($white, $alpha: 0.1);
+$dark-focus-visible: $brand-blue;
+$dark-button-hover: color.adjust($lighter-grey, $lightness: -20%);
+$dark-services-border: color.change($white, $alpha: 0.1);
 $dark-alt-bg: $ultra-dark-blue;
 $dark-portfolio-overlay: color.change($white, $alpha: 0.15);
 $dark-testimonial-box-shadow: color.change(hsl(0, 0%, 64%), $alpha: 0.05);
