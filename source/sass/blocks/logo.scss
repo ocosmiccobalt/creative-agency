@@ -1,0 +1,54 @@
+@use "variables" as *;
+
+.logo {
+  display: inline-block;
+
+  vertical-align: top;
+
+  border-radius: 1.25rem;
+
+  &--header {
+    padding: 0.5rem;
+
+    color: var(--heavy-text, #{$light-heavy-text});
+
+    background-color: transparent;
+  }
+
+  &--footer {
+    padding: 1.188rem 1.563rem;
+
+    color: $black;
+
+    background-color: var(--footer-contrast, #{$light-footer-contrast});
+  }
+}
+
+.logo__image {
+  display: block;
+
+  &--header {
+    width: 5.688rem;
+    height: 2.063rem;
+  }
+
+  &--footer {
+    width: 8.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .logo {
+    &--header {
+      padding: 0.625rem;
+    }
+  }
+
+  .logo__image {
+    &--header {
+      width: 8.5rem;
+      height: 3.125rem;
+    }
+  }
+}
