@@ -8,12 +8,12 @@
 
   min-width: 10ch;
   min-height: 3.167em;
-  padding: 0.75em 2.75em 0.833em;
+  padding: 0.75em 2.75em;
 
   font-family: inherit;
   font-weight: 700;
   font-size: 0.75rem;
-  line-height: 1.25;
+  line-height: 1.333;
   letter-spacing: inherit;
   text-align: center;
   text-decoration: none;
@@ -69,31 +69,56 @@
   }
 }
 
+.button--main-nav {
+  display: none;
+}
+
 .button__icon {
   flex-shrink: 0;
   flex-basis: auto;
 
+  display: inline-block;
   width: 1.333em;
   height: 1.333em;
-  margin-right: 0.833em;
+
+  vertical-align: top;
 }
 
 .button__text {
   flex-shrink: 0;
   flex-basis: auto;
+
+  display: inline-block;
+
+  vertical-align: top;
+}
+
+.button__icon + .button__text {
+  padding-left: 0.833em;
 }
 
 @media (min-width: $tablet-width) {
   .button {
     min-height: 3em;
-    padding: 0.75em 3em;
+    padding: 0.625em 3em;
 
     font-size: 1rem;
+    line-height: 1.5;
   }
 
   .button__icon {
     width: 1.5em;
     height: 1.5em;
-    margin-right: 0.625em;
+  }
+
+  .button__icon + .button__text {
+    padding-left: 0.625em;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button--main-nav {
+    display: inline-flex;
+    max-width: 30%;
   }
 }
