@@ -43,8 +43,8 @@
 
     <header class="page-header">
       <div class="page-header__wrapper wrapper">
-        <a class="logo logo--header">
-          <svg class="logo__image" width="136" height="50" role="img" aria-label="Agency Creative Logo" focusable="false">
+        <a class="page-header__logo logo logo--header">
+          <svg class="logo__image logo__image--header" width="136" height="50" role="img" aria-label="Agency Creative Logo" focusable="false">
             <use xlink:href="#logo-group" aria-hidden="true"></use>
           </svg>
         </a>
@@ -53,9 +53,9 @@
           <button class="main-nav__toggle main-nav__toggle--nojs" type="button" aria-controls="site-list">
             <span class="visually-hidden">Меню</span>
           </button>
-          <ul class="main-nav__list site-list site-list--nojs" id="site-list" role="list">
+          <ul class="site-list site-list--nojs" id="site-list" role="list">
             <li class="site-list__item">
-              <a class="site-list__link" href="#home">Home</a>
+              <a class="site-list__link site-list__link--current" href="#home">Home</a>
             </li>
             <li class="site-list__item">
               <a class="site-list__link" href="#about">About</a>
@@ -68,7 +68,7 @@
             </li>
           </ul>
 
-          <a class="main-nav__button button button--inverted" href="#collaboration">Contact us</a>
+          <a class="main-nav__button button button--inverted button--main-nav" href="#collaboration">Contact us</a>
         </nav>
       </div>
     </header>
@@ -336,7 +336,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper wrapper">
         <a class="logo logo--footer">
-          <svg class="logo__image" width="136" height="50" role="img" aria-label="Agency Creative Logo" focusable="false">
+          <svg class="logo__image logo__image--footer" width="136" height="50" role="img" aria-label="Agency Creative Logo" focusable="false">
             <use xlink:href="#logo-group" aria-hidden="true"></use>
           </svg>
         </a>
