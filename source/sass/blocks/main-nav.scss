@@ -1,0 +1,148 @@
+@use "variables" as *;
+
+.main-nav {
+  position: relative;
+
+  flex-shrink: 0;
+  flex-basis: auto;
+
+  width: 100%;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  z-index: 10;
+  right: calc(6.41% - 0.625rem);
+  bottom: 100%;
+
+  width: 3.063rem;
+  height: 3.063rem;
+  padding: 0;
+
+  border: none;
+  border-radius: 0.125rem;
+  background-color: transparent;
+
+  cursor: pointer;
+  transition: 220ms ease-in-out;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 1.063rem;
+    right: 0;
+    left: 0;
+
+    width: 1.125rem;
+    height: 0.125rem;
+    margin: 0 auto;
+
+    background-color: var(--heavy-text, #{$light-heavy-text});
+    box-shadow: 0 0.875rem 0 0 var(--heavy-text, #{$light-heavy-text});
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    background-color: $brand-blue;
+    box-shadow: 0 0.875rem 0 0 $brand-blue;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 0.75rem;
+    height: 0.125rem;
+    margin: auto 0;
+    margin-left: -0.375rem;
+
+    background-color: var(--heavy-text, #{$light-heavy-text});
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    background-color: $brand-blue;
+  }
+
+  &:focus {
+    outline: 0.25em solid var(--focus-visible, #{$light-focus-visible});
+    outline-offset: -0.2em;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 0.25em solid var(--focus-visible, #{$light-focus-visible});
+    outline-offset: -0.2em;
+  }
+}
+
+.main-nav__toggle--open {
+  &::before,
+  &::after {
+    top: 50%;
+    left: 50%;
+    bottom: auto;
+    right: auto;
+
+    width: 0.125rem;
+    height: 1.375rem;
+    margin: 0;
+  }
+
+  &::before {
+    box-shadow: none;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.main-nav__toggle--nojs {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__toggle {
+    margin-bottom: 0.688rem;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    display: flex;
+    align-items: flex-start;
+
+    width: 75%;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__button {
+    flex-shrink: 0;
+    flex-basis: auto;
+
+    margin-left: auto;
+    margin-top: 0.625rem;
+    margin-right: 0.625rem;
+  }
+}
