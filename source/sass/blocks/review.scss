@@ -1,0 +1,143 @@
+@use "variables" as *;
+
+.review {
+  width: 100%;
+  min-height: 16.063em;
+  padding: 2.5em;
+  padding-left: 11.5%;
+  padding-right: 5.9%;
+
+  border-radius: 1.25em;
+  background-color: var(--alt-bg, #{$light-alt-bg});
+  box-shadow: 0 0.5em 1.5em 0 var(--testimonial-box-shadow, #{$light-testimonial-box-shadow});
+
+  &--small {
+    width: 10.375em;
+    min-height: 10.375em;
+    padding: 1.25em;
+    padding-top: 1.688em;
+
+    border-radius: 1em;
+    background-color: transparent;
+    box-shadow: 0 0.5em 1.5em 0 $intro-box-shadow;
+  }
+}
+
+.review__author {
+  position: relative;
+
+  min-height: 4.375em;
+  margin-bottom: 2.188em;
+  padding-left: 6.25em;
+
+  .review--small & {
+    min-height: 2em;
+    margin-bottom: 0.75em;
+    padding-left: 2.625em;
+  }
+}
+
+.review__name {
+  margin: 0;
+  margin-bottom: 0.389em;
+  padding-top: 0.722em;
+
+  font-weight: 600;
+  font-size: 1.125em;
+  line-height: 1.222;
+  letter-spacing: 0.01em;
+  color: var(--primary-color, #{$light-primary-color});
+
+  .review--small & {
+    margin-bottom: 0.2em;
+    padding-top: 0.5em;
+
+    font-size: 0.625em;
+    line-height: 1.25;
+    color: var(--heavy-text, #{$light-heavy-text});
+  }
+}
+
+.review__business {
+  margin: 0;
+
+  font-weight: 600;
+  font-size: 0.688em;
+  line-height: 1.273;
+  letter-spacing: 0.01em;
+
+  .review--small & {
+    font-size: 0.375em;
+    line-height: 1.25;
+  }
+}
+
+.review__avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 4.375em;
+  height: 4.375em;
+  margin: 0;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  .review--small & {
+    width: 2em;
+    height: 2em;
+  }
+}
+
+.review__image {
+  display: block;
+  width: 100%;
+
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.review__blockquote {
+  margin: 0;
+}
+
+.review__text {
+  margin: 0;
+
+  font-size: 0.875em;
+  letter-spacing: 0.01em;
+
+  .review--small & {
+    font-family: $nunito-family;
+    font-size: 0.625em;
+    line-height: 1.4;
+    color: var(--heavy-text, #{$light-heavy-text});
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .review:not(.review--small) {
+    min-height: 20.938em;
+    padding: 2.5em;
+    padding-top: 3.063em;
+    padding-right: 1.875em;
+  }
+
+  .review__author {
+    margin-bottom: 1.563em;
+  }
+
+  .review__name {
+    margin-bottom: 0;
+    padding-top: 0.35em;
+
+    font-size: 1.25em;
+    line-height: 1.7;
+  }
+
+  .review__text {
+    font-size: 1.125em;
+    line-height: 1.556;
+  }
+}
