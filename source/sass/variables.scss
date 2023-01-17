@@ -87,13 +87,19 @@ $button-box-shadow: color.change($brand-blue, $alpha: 0.5);
 $intro-box-shadow: color.change($full-black, $alpha: 0.15);
 $services-box-shadow: color.change($full-black, $alpha: 0.1);
 
-/* Other vars */
+/* Viewport */
 
 $large-mobile-width: 24.375rem;
 $tablet-width: 48rem;
 $desktop-width: 79rem;
 
+/* Grid & box model */
+
 $desktop-column-gap: 1.25rem;
+$header-logo-mobile-padding: 0.5em;
+$header-logo-tablet-padding: 0.625em;
+
+/* Font */
 
 /* Georgia is a serif font, but seems to give a closer match than sans-serif web safe fonts */
 $nunito-family: "Nunito", "Nunito-fallback", "Georgia", sans-serif;
