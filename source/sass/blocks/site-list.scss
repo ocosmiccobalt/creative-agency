@@ -13,7 +13,7 @@
   @include reset-list();
 
   background-color: var(--body-bg, #{$light-body-bg});
-  box-shadow: 0 0.25rem 0.5rem 0 $brand-blue;
+  box-shadow: 0 0.25em 0.5em 0 $brand-blue;
 
   &--nojs {
     position: static;
@@ -26,10 +26,12 @@
 
 .site-list__link {
   display: block;
-  padding: 1.25rem 6.41%;
+  padding: 1.429em 6.41%;
 
   font-weight: 700;
+  font-size: 0.875em;
   line-height: 1.2;
+  letter-spacing: 0.01em;
   text-align: center;
   text-decoration: none;
   color: var(--heavy-text, #{$light-heavy-text});
@@ -85,9 +87,9 @@
   }
 
   .site-list__link {
-    padding: 1.5rem 1.563rem 0.75rem;
+    padding: 1.333em 1.389em 0.667em;
 
-    font-size: 1.125rem;
+    font-size: 1.125em;
     font-weight: 400;
 
     background-color: transparent;

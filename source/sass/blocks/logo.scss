@@ -5,10 +5,10 @@
 
   vertical-align: top;
 
-  border-radius: 1.25rem;
+  border-radius: 1.25em;
 
   &--header {
-    padding: 0.5rem;
+    padding: $header-logo-mobile-padding;
 
     color: var(--heavy-text, #{$light-heavy-text});
 
@@ -16,7 +16,7 @@
   }
 
   &--footer {
-    padding: 1.188rem 1.563rem;
+    padding: 1.188em 1.563em;
 
     color: $black;
 
@@ -28,27 +28,27 @@
   display: block;
 
   &--header {
-    width: 5.688rem;
-    height: 2.063rem;
+    width: 5.688em;
+    height: 2.063em;
   }
 
   &--footer {
-    width: 8.5rem;
-    height: 3.125rem;
+    width: 8.5em;
+    height: 3.125em;
   }
 }
 
 @media (min-width: $tablet-width) {
   .logo {
     &--header {
-      padding: 0.625rem;
+      padding: $header-logo-tablet-padding;
     }
   }
 
   .logo__image {
     &--header {
-      width: 8.5rem;
-      height: 3.125rem;
+      width: 8.5em;
+      height: 3.125em;
     }
   }
 }
