@@ -63,7 +63,7 @@ $light-primary-color: $brand-blue;
 $light-focus-visible: $desaturated-darker-brand-blue;
 $light-button-hover: color.scale($brand-blue, $lightness: -20%);
 $light-services-border: color.change($full-black, $alpha: 0.1);
-$light-alt-bg: transparent;
+$light-alt-bg: $light-body-bg; // there is not alt bg in the light color scheme
 $light-portfolio-overlay: color.change($full-black, $alpha: 0.15);
 $light-testimonial-box-shadow: color.change($full-black, $alpha: 0.05);
 $light-footer-contrast: $white;
