@@ -1,0 +1,232 @@
+@use "variables" as *;
+
+.intro__wrapper {
+  padding: 1.813em 6.41% 2.75em;
+
+  text-align: center;
+}
+
+.intro__tagline {
+  margin: 0 auto;
+  margin-bottom: 0.75em;
+
+  font-family: $nunito-family;
+  font-weight: 800;
+  font-size: 1.75em;
+  line-height: 1.357;
+  letter-spacing: 0.01em;
+  color: var(--heavy-text, #{$light-heavy-text});
+}
+
+.intro__description {
+  margin: 0 auto;
+  margin-bottom: 1.357em;
+
+  font-family: $nunito-family;
+  font-size: 0.875em;
+  letter-spacing: 0.01em;
+}
+
+.intro__button {
+  max-width: 12.625rem;
+}
+
+.intro__inner {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 1.47%;
+  padding-top: 2.938em;
+
+  text-align: left;
+}
+
+@supports (display: grid) {
+  .intro__inner {
+    display: grid;
+    grid-template-columns: [illustration-start] minmax(0, 1fr) [review-start] min-content [review-end illustration-end];
+    grid-template-rows: [illustration-start] min-content [review-start] 2.375em [illustration-end] min-content [review-end];
+  }
+}
+
+.intro__review {
+  flex-shrink: 0;
+  flex-basis: auto;
+  align-self: flex-end;
+
+  margin: 0;
+  margin-top: -2.375em;
+  margin-right: -0.688em;
+  margin-left: auto;
+}
+
+@supports (display: grid) {
+  .intro__review {
+    grid-area: review;
+
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+.intro__illustration {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-basis: auto;
+
+  margin: 0;
+}
+
+@supports (display: grid) {
+  .intro__illustration {
+    display: grid;
+    grid-template-columns: [rating-start hero-start] min-content [rating-end] minmax(0, 1fr) [hero-end];
+    grid-template-rows: [rating-start] min-content [hero-start] 2.375em [rating-end] min-content [hero-end];
+    grid-area: illustration;
+  }
+}
+
+.intro__rating {
+  position: relative;
+
+  flex-shrink: 0;
+  flex-basis: auto;
+  align-self: flex-start;
+
+  margin-left: -0.563em;
+  margin-bottom: -2.375em;
+}
+
+@supports (display: grid) {
+  .intro__rating {
+    grid-area: rating;
+
+    margin-bottom: 0;
+  }
+}
+
+.intro__hero {
+  flex-shrink: 0;
+  flex-basis: auto;
+
+  margin: 0;
+}
+
+@supports (display: grid) {
+  .intro__hero {
+    grid-area: hero;
+  }
+}
+
+.intro__image {
+  display: block;
+  width: 100%;
+
+  border-radius: 0.75em;
+}
+
+@media (min-width: $tablet-width) {
+  .intro__description {
+    margin-bottom: 2em;
+  }
+
+  .intro__button {
+    max-width: 17.5rem;
+  }
+
+  .intro__image {
+    border-radius: 3.125em;
+  }
+
+  @supports (display: grid) {
+    .intro__inner {
+      grid-template-rows: [illustration-start] min-content [review-start] 3.688em [illustration-end] min-content [review-end];
+    }
+  }
+
+  .intro__review {
+    margin-top: -3.688em;
+  }
+
+  @supports (display: grid) {
+    .intro__review {
+      margin-top: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro__wrapper {
+    padding: 5em 0.75em;
+  }
+
+  .intro__tagline {
+    max-width: 70%;
+    margin-bottom: 0.359em;
+
+    font-size: 4em;
+  }
+
+  .intro__description {
+    max-width: 70%;
+    margin-bottom: 1.55em;
+
+    font-size: 1.25em;
+    line-height: 1.5;
+  }
+
+  .intro__inner {
+    width: 46.188em;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 3.125em;
+    padding-bottom: 1.438em;
+  }
+
+  @supports (display: grid) {
+    .intro__inner {
+      grid-template-rows: [illustration-start] min-content [review-start] 9.938em [illustration-end] min-content [review-end];
+    }
+  }
+
+  .intro__review {
+    margin-top: -9.938em;
+    margin-right: -6.688em;
+  }
+
+  @supports (display: grid) {
+    .intro__review {
+      margin-top: 0;
+    }
+  }
+
+  .intro__illustration {
+    padding-top: 4.563em;
+  }
+
+  @supports (display: grid) {
+    .intro__illustration {
+      grid-template-rows: [rating-start hero-start] 7.438em [rating-end] min-content [hero-end];
+
+      padding-top: 3.063em;
+    }
+  }
+
+  .intro__rating {
+    margin-left: -6.688em;
+    margin-bottom: -7.438em;
+  }
+
+  @supports (display: grid) {
+    .intro__rating {
+      align-self: end;
+
+      margin-bottom: 0;
+    }
+
+    .intro__hero {
+      align-self: end;
+    }
+  }
+}
