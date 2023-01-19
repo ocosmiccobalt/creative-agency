@@ -18,7 +18,7 @@
     padding-top: 1.688em;
 
     border-radius: 1em;
-    background-color: transparent;
+    background-color: var(--body-bg, #{$light-body-bg});
     box-shadow: 0 0.5em 1.5em 0 $intro-box-shadow;
   }
 }
