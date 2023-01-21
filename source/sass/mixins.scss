@@ -10,6 +10,64 @@
   overflow-wrap: break-word;
 }
 
+@mixin section-wrapper-padding() {
+  padding: 3.125em 6.41%;
+
+  @media (min-width: $desktop-width) {
+    padding: 6.25em 0.75em;
+  }
+}
+
+@mixin section-title() {
+  margin: 0 auto;
+  margin-bottom: 0.643em;
+
+  font-weight: 600;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--primary-color, #{$light-primary-color});
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0.667em;
+
+    font-size: 1.5em;
+  }
+}
+
+@mixin section-subtitle() {
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+
+  font-family: $nunito-family;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.375;
+  letter-spacing: 0.003em;
+  text-align: center;
+  color: var(--heavy-text, #{$light-heavy-text});
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0.909em;
+
+    font-size: 3.438em;
+    line-height: 1.364;
+  }
+}
+
+@mixin section-description-paragraph() {
+  margin: 0;
+
+  font-size: 0.875em;
+  letter-spacing: 0.01em;
+
+  @media (min-width: $desktop-width) {
+    font-size: 1.25em;
+    line-height: 1.6;
+  }
+}
+
 @mixin polka-dot($color, $desktop-color-change: false) {
   width: $dots-el-width;
   height: $dots-el-height;
