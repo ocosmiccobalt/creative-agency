@@ -1,9 +1,53 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 .intro__wrapper {
+  position: relative;
+
   padding: 1.813em 6.41% 2.75em;
 
   text-align: center;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    width: 1em;
+    height: 1em;
+
+    border-radius: 50%;
+    box-shadow: 0 0.188em 1.25em 0 $circle-box-shadow;
+  }
+
+  &::before {
+    top: 15em;
+    left: -0.188em;
+
+    background-image: linear-gradient(
+      180deg,
+      $faded-brand-blue,
+      $brand-blue
+    );
+  }
+
+  &::after {
+    top: 1.125em;
+    right: -0.5em;
+
+    background-image: linear-gradient(
+      180deg,
+      $rose,
+      #fe7e7e,
+      #fd6f6f,
+      #fc5f5f,
+      #fb5050,
+      #f94141,
+      #f83333,
+      $red
+    );
+  }
 }
 
 .intro__tagline {
@@ -50,6 +94,7 @@
 }
 
 .intro__review {
+  position: relative;
   flex-shrink: 0;
   flex-basis: auto;
   align-self: flex-end;
@@ -89,6 +134,7 @@
 
 .intro__rating {
   position: relative;
+  z-index: 5;
 
   flex-shrink: 0;
   flex-basis: auto;
@@ -107,10 +153,39 @@
 }
 
 .intro__hero {
+  position: relative;
+
   flex-shrink: 0;
   flex-basis: auto;
 
   margin: 0;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+  }
+
+  &::before {
+    top: -0.75em;
+    right: -1em;
+
+    @include polka-dot(
+      $color: var(--orange, #{$orange}),
+      $desktop-color-change: var(--red, #{$red})
+    );
+  }
+
+  &::after {
+    bottom: -1em;
+    left: -0.563em;
+
+    @include polka-dot(
+      $color: var(--primary-color, #{$light-primary-color})
+    );
+  }
 }
 
 @supports (display: grid) {
@@ -135,10 +210,6 @@
     max-width: 17.5rem;
   }
 
-  .intro__image {
-    border-radius: 3.125em;
-  }
-
   @supports (display: grid) {
     .intro__inner {
       grid-template-rows: [illustration-start] min-content [review-start] 3.688em [illustration-end] min-content [review-end];
@@ -154,11 +225,31 @@
       margin-top: 0;
     }
   }
+
+  .intro__image {
+    border-radius: 3.125em;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .intro__wrapper {
     padding: 5em 0.75em;
+
+    &::before,
+    &::after {
+      width: 2em;
+      height: 2em;
+    }
+
+    &::before {
+      top: 20em;
+      left: 0.375em;
+    }
+
+    &::after {
+      top: 10.938em;
+      right: -1em;
+    }
   }
 
   .intro__tagline {
@@ -177,11 +268,54 @@
   }
 
   .intro__inner {
+    position: relative;
+
     width: 46.188em;
     margin: 0 auto;
     padding: 0;
     padding-top: 3.125em;
     padding-bottom: 1.438em;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      width: 2em;
+      height: 2em;
+
+      border-radius: 50%;
+      box-shadow: 0 0.188em 1.25em 0 $circle-box-shadow;
+    }
+
+    &::before {
+      top: 17.625em;
+      left: -3.25em;
+
+      background-image: linear-gradient(
+        180deg,
+        $rose,
+        #fe7e7e,
+        #fd6f6f,
+        #fc5f5f,
+        #fb5050,
+        #f94141,
+        #f83333,
+        $red
+      );
+    }
+
+    &::after {
+      top: 4.875em;
+      right: -9.75em;
+
+      background-image: linear-gradient(
+        180deg,
+        $faded-brand-blue,
+        $brand-blue
+      );
+    }
   }
 
   @supports (display: grid) {
@@ -227,6 +361,21 @@
 
     .intro__hero {
       align-self: end;
+    }
+  }
+
+  .intro__hero {
+    &::before {
+      top: auto;
+      right: auto;
+      bottom: -1.25em;
+      left: 10.875em;
+    }
+
+    &::after {
+      top: -1.25em;
+      bottom: auto;
+      left: 8.688em;
     }
   }
 }
