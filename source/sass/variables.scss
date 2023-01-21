@@ -104,3 +104,11 @@ $header-logo-tablet-padding: 0.625em;
 /* Georgia is a serif font, but seems to give a closer match than sans-serif web safe fonts */
 $nunito-family: "Nunito", "Nunito-fallback", "Georgia", sans-serif;
 $quicksand-family: "Quicksand", "Quicksand-fallback", "Trebuchet MS", sans-serif;
+
+/* Polka dot size */
+
+$dots-el-width: 6.188em;
+$dots-el-height: 4.438em;
+$dots-bg-size: 1.125em 1.313em;
+$dot-r: 0.188em;
+$dot-sm-r: 0.125em;
