@@ -1,0 +1,151 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.about__wrapper {
+  @include section-wrapper-padding();
+}
+
+.about__title {
+  @include section-title();
+}
+
+.about__subtitle {
+  @include section-subtitle();
+}
+
+.about__inner {
+  padding-bottom: 4.063em;
+
+  text-align: center;
+}
+
+.about__description {
+  @include section-description-paragraph();
+
+  margin-bottom: 0.714em;
+
+  text-align: left;
+}
+
+.about__button {
+  max-width: 8.25rem;
+  margin: 0 0.5rem;
+  margin-top: 1.563rem;
+
+  &--with-icon {
+    max-width: 10.125rem;
+  }
+}
+
+.about__illustration {
+  position: relative;
+
+  margin: 0;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: -1em;
+    left: 0;
+
+    @include polka-dot(
+      $color: var(--fuchsia, #{$fuchsia})
+    );
+  }
+}
+
+.about__image {
+  display: block;
+  width: 100%;
+
+  border-radius: 0.75em;
+}
+
+@media (min-width: $tablet-width) {
+  .about__button {
+    max-width: 14.375rem;
+
+    &--with-icon {
+      max-width: 16.875rem;
+    }
+  }
+
+  .about__image {
+    border-radius: 1.5em;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about__title {
+    flex-shrink: 0;
+    flex-basis: auto;
+
+    width: 70%;
+  }
+
+  .about__subtitle {
+    flex-shrink: 0;
+    flex-basis: auto;
+
+    width: 70%;
+    margin-bottom: 0.709em;
+  }
+
+  .about__inner {
+    flex-shrink: 0;
+    flex-basis: auto;
+    order: 2;
+
+    width: 50%;
+    padding-top: 1.625em;
+    padding-bottom: 0;
+    padding-left: 0.625em;
+
+    text-align: left;
+  }
+
+  .about__description {
+    margin-bottom: 1.2em;
+  }
+
+  .about__button {
+    margin: 0;
+    margin-right: 1.313rem;
+  }
+
+  .about__illustration {
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-self: flex-start;
+
+    width: 45.565%;
+    margin-right: auto;
+
+    &::before {
+      top: auto;
+      left: auto;
+      right: -2.375em;
+      bottom: -0.563em;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: -1.125em;
+      left: -1.875em;
+
+      @include polka-dot(
+        $color: var(--orange, #{$orange})
+      );
+    }
+  }
+}
