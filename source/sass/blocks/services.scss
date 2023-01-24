@@ -3,6 +3,7 @@
 
 .services__wrapper {
   @include section-wrapper-padding();
+  padding-bottom: 1em;
 }
 
 .services__title {
@@ -210,7 +211,7 @@
     align-items: flex-start;
 
     padding-top: 3.688em;
-    padding-bottom: 3.688em;
+    padding-bottom: 2.438em;
   }
 
   .services__inner {
