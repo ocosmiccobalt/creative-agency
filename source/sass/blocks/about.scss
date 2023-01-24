@@ -28,13 +28,8 @@
 }
 
 .about__button {
-  max-width: 8.25rem;
   margin: 0 0.5rem;
   margin-top: 1.563rem;
-
-  &--with-icon {
-    max-width: 10.125rem;
-  }
 }
 
 .about__illustration {
@@ -64,14 +59,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .about__button {
-    max-width: 14.375rem;
-
-    &--with-icon {
-      max-width: 16.875rem;
-    }
-  }
-
   .about__image {
     border-radius: 1.5em;
   }

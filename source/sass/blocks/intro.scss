@@ -71,10 +71,6 @@
   letter-spacing: 0.01em;
 }
 
-.intro__button {
-  max-width: 12.625rem;
-}
-
 .intro__inner {
   display: flex;
   flex-direction: column;
@@ -204,10 +200,6 @@
 @media (min-width: $tablet-width) {
   .intro__description {
     margin-bottom: 2em;
-  }
-
-  .intro__button {
-    max-width: 17.5rem;
   }
 
   @supports (display: grid) {
