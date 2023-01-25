@@ -35,6 +35,34 @@
 }
 
 @media (min-width: $desktop-width) {
+  .testimonial__wrapper {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+
+      @include polka-dot(
+        $color: var(--blue, #{$blue})
+      );
+
+      transform: rotate(15deg);
+    }
+
+    &::before {
+      top: 3.75em;
+      left: 8.125em;
+    }
+
+    &::after {
+      z-index: -1;
+      right: -0.875em;
+      bottom: 4.125em;
+    }
+  }
+
   .testimonial__title {
     max-width: 70%;
   }
