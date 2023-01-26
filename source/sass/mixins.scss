@@ -68,25 +68,33 @@
   }
 }
 
-@mixin polka-dot($color, $desktop-color-change: false) {
-  width: $dots-el-width;
-  height: $dots-el-height;
+@mixin polka-dot(
+  $color,
+  $desktop-color-change: false,
+  $width: $dots-el-width,
+  $height: $dots-el-height,
+  $r: $dot-r,
+  $sm-r: $dot-sm-r,
+  $bg-size: $dots-bg-size
+  ) {
+  width: $width;
+  height: $height;
 
   background-image: radial-gradient(
-    circle at $dot-r $dot-r,
-    $color $dot-sm-r,
-    rgba(255, 255, 255, 0) $dot-r
+    circle at $r $r,
+    $color $sm-r,
+    rgba(255, 255, 255, 0) $r
   );
 
-  background-size: $dots-bg-size;
+  background-size: $bg-size;
   background-repeat: repeat;
 
   @if $desktop-color-change {
     @media (min-width: $desktop-width) {
       background-image: radial-gradient(
-        circle at $dot-r $dot-r,
-        $desktop-color-change $dot-sm-r,
-        rgba(255, 255, 255, 0) $dot-r
+        circle at $r $r,
+        $desktop-color-change $sm-r,
+        rgba(255, 255, 255, 0) $r
       );
     }
   }
