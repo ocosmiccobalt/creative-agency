@@ -1,5 +1,5 @@
-import Nav from './nav';
-import replaceAnchorsWithButtons from './util/replaceAnchorsWithButtons';
+import Nav from './nav.js';
+import replaceAnchorsWithButtons from './util/replaceAnchorsWithButtons.js';
 
 const work = () => {
   const navElem = document.querySelector(`.main-nav`);

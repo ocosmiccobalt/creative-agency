@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Agency Creative Page",
+  "type": "module",
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\"",
@@ -31,7 +32,7 @@
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.0",
     "browser-sync": "^2.27.10",
-    "del": "^6.1.1",
+    "del": "^7.0.0",
     "eslint": "^8.29.0",
     "eslint-config-htmlacademy": "^8.0.0",
     "gulp": "^4.0.2",
