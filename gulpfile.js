@@ -173,35 +173,34 @@ function watch() {
   gulp.watch("source/js/**/*.js", gulp.series(jsDev, reload));
 }
 
-exports.style = style;
 exports.clean = clean;
 exports.copy = copy;
 exports.sprite = sprite;
-exports.html = html;
+exports.style = style;
 exports.jsDev = jsDev;
 exports.jsProd = jsProd;
-exports.buildDev = gulp.series(
+exports.html = html;
+exports.buildProd = gulp.series(
   clean,
   gulp.parallel(
     copy,
-    style
+    sprite,
+    style,
+    jsProd
   ),
-  sprite,
-  gulp.parallel(
-    html,
-    jsDev
-  )
+  html
 );
 exports.default = gulp.series(
   clean,
   gulp.parallel(
     copy,
-    style
+    sprite,
+    style,
+    jsDev
   ),
-  sprite,
+  html,
   gulp.parallel(
-    html,
-    jsProd
+    serve,
+    watch
   )
 );
-exports.dev = gulp.series(serve, watch);

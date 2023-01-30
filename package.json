@@ -8,8 +8,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\"",
     "eslint": "eslint source/js/",
     "test": "npm run editorconfig && npm run stylelint && npm run eslint",
-    "build": "gulp",
-    "start": "gulp buildDev && gulp dev"
+    "build": "gulp buildProd",
+    "start": "gulp"
   },
   "browserslist": [
     "last 2 versions",
