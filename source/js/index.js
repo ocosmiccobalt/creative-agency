@@ -1,14 +1,17 @@
 import Nav from './nav.js';
 import replaceAnchorsWithButtons from './util/replaceAnchorsWithButtons.js';
 
-const work = () => {
-  const navElem = document.querySelector(`.main-nav`);
+const init = (Component, elemSelector, ...rest) => {
+  const elem = document.querySelector(elemSelector);
 
-  if (navElem !== null) {
-    const nav = new Nav(navElem, `main-nav__toggle`, `site-list`);
-    nav.init();
+  if (elem !== null) {
+    const instance = new Component(elem, ...rest);
+    instance.init();
   }
+};
 
+const work = () => {
+  init(Nav, `.main-nav`, `main-nav__toggle`, `site-list`);
   replaceAnchorsWithButtons();
 };
 
