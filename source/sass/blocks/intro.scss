@@ -199,7 +199,17 @@
 
 @media (min-width: $tablet-width) {
   .intro__description {
-    margin-bottom: 2em;
+    margin-bottom: 1.75em;
+
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  .intro__inner {
+    max-width: 46.188em;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   @supports (display: grid) {
@@ -254,17 +264,13 @@
   .intro__description {
     max-width: 70%;
     margin-bottom: 1.55em;
-
-    font-size: 1.25em;
-    line-height: 1.5;
   }
 
   .intro__inner {
     position: relative;
 
     width: 46.188em;
-    margin: 0 auto;
-    padding: 0;
+    max-width: none;
     padding-top: 3.125em;
     padding-bottom: 1.438em;
 

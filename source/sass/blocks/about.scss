@@ -59,6 +59,11 @@
 }
 
 @media (min-width: $tablet-width) {
+  .about__illustration {
+    max-width: 46.188em;
+    margin: 0 auto;
+  }
+
   .about__image {
     border-radius: 1.5em;
   }
@@ -113,7 +118,8 @@
     align-self: flex-start;
 
     width: 45.565%;
-    margin-right: auto;
+    max-width: none;
+    margin-left: 0;
 
     &::before {
       top: auto;
