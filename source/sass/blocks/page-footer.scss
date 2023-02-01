@@ -156,6 +156,7 @@
     flex-shrink: 0;
     flex-basis: auto;
 
+    width: 100%;
     padding: 0 0.75em 0.688em;
   }
 
@@ -173,9 +174,10 @@
     flex-shrink: 0;
     flex-basis: auto;
 
-    width: 61.375em;
+    width: 62em;
     margin-bottom: 0;
     padding: 0;
+    padding-left: 0.625em;
   }
 
   .page-footer__section {
