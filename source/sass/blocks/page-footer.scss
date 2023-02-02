@@ -2,6 +2,8 @@
 @use "mixins" as *;
 
 .page-footer {
+  position: relative;
+
   flex-shrink: 0;
 
   color: var(--footer-contrast, #{$light-footer-contrast});
@@ -23,6 +25,11 @@
 .page-footer__logo {
   margin-left: 6.41%;
   margin-bottom: 3.813em;
+}
+
+.page-footer__switcher {
+  margin: 0;
+  margin-left: -3.125em;
 }
 
 .page-footer__inner {

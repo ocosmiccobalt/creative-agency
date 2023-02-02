@@ -67,6 +67,7 @@ $light-alt-bg: $light-body-bg; // there is not alt bg in the light color scheme
 $light-portfolio-overlay: color.change($full-black, $alpha: 0.15);
 $light-testimonial-box-shadow: color.change($full-black, $alpha: 0.05);
 $light-footer-contrast: $white;
+$light-switcher-box-shadow: color.change($full-black, $alpha: 0.2);
 
 $dark-body-bg: $darker-black;
 $dark-heavy-text: $lighter-grey;
@@ -79,6 +80,7 @@ $dark-alt-bg: $ultra-dark-blue;
 $dark-portfolio-overlay: color.change($white, $alpha: 0.15);
 $dark-testimonial-box-shadow: color.change(hsl(0, 0%, 64%), $alpha: 0.05);
 $dark-footer-contrast: $lighter-grey;
+$dark-switcher-box-shadow: color.change($white, $alpha: 0.2);
 
 /* Color schemes interchange vars */
 
@@ -99,6 +101,7 @@ $desktop-width: 79rem;
 $desktop-column-gap: 1.25rem;
 $header-logo-mobile-padding: 0.5em;
 $header-logo-tablet-padding: 0.625em;
+$switcher-padding: 0.125em;
 
 /* Font */
 

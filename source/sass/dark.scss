@@ -24,6 +24,8 @@
 
   --footer-contrast: #{$dark-footer-contrast};
 
+  --switcher-box-shadow: #{$dark-switcher-box-shadow};
+
   --red: #{color.adjust($red, $lightness: 5%)};
 
   --orange: #{color.adjust($orange, $lightness: 5%)};

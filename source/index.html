@@ -340,6 +340,33 @@
           </svg>
         </a>
 
+        <fieldset class="page-footer__switcher switcher">
+          <legend class="visually-hidden switcher__legend">Color scheme</legend>
+          <input class="visually-hidden switcher__radio switcher__radio--light" type="radio" name="color-scheme" id="light" value="light">
+          <label class="switcher__label" for="light">
+            <svg class="switcher__icon" width="32" height="32" role="img" aria-label="Light" focusable="false">
+              <use xlink:href="#icon-scheme-switcher-light" aria-hidden="true"></use>
+            </svg>
+          </label>
+          <input class="visually-hidden switcher__radio switcher__radio--auto" type="radio" name="color-scheme" id="auto" value="auto" checked>
+          <label class="switcher__label" for="auto">
+            <svg class="switcher__icon" width="32" height="32" role="img" aria-label="System" focusable="false">
+              <use xlink:href="#icon-scheme-switcher-auto" aria-hidden="true"></use>
+            </svg>
+          </label>
+          <input class="visually-hidden switcher__radio switcher__radio--dark" type="radio" name="color-scheme" id="dark" value="dark">
+          <label class="switcher__label" for="dark">
+            <svg class="switcher__icon" width="32" height="32" role="img" aria-label="Dark" focusable="false">
+              <use xlink:href="#icon-scheme-switcher-dark" aria-hidden="true"></use>
+            </svg>
+          </label>
+          <div class="switcher__status">
+            <svg class="switcher__icon switcher__icon--status" width="32" height="32" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-scheme-switcher-status"></use>
+            </svg>
+          </div>
+        </fieldset>
+
         <div class="page-footer__inner">
           <section class="page-footer__section page-footer__section--policies">
             <h2 class="page-footer__title">Terms & policies</h2>

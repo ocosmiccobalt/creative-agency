@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column-reverse;
 
-  margin-bottom: 3.125em;
+  margin-bottom: 4.875em;
 
   @include section-wrapper-padding();
 }
@@ -101,8 +101,6 @@
 @media (min-width: $desktop-width) {
   .collaboration__wrapper {
     flex-direction: row;
-
-    margin-bottom: 4.875em;
   }
 
   .collaboration__inner {

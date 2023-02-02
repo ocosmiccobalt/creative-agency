@@ -1,0 +1,103 @@
+@use "variables" as *;
+
+.switcher {
+  position: absolute;
+  z-index: 5;
+  top: -3.5em;
+  left: 50%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  padding: $switcher-padding;
+
+  border: none;
+}
+
+.switcher__legend {
+  pointer-events: none;
+}
+
+.switcher__label {
+  display: block;
+  width: 2em;
+  height: 2em;
+  padding: 0.25em;
+
+  color: var(--heavy-text, #{$light-heavy-text});
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.switcher__radio:checked + .switcher__label {
+  color: var(--body-bg, #{$light-body-bg});
+}
+
+.switcher__status {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  color: var(--heavy-text, #{$light-heavy-text});
+
+  border-radius: 1.125em;
+  background-color: var(--body-bg, #{$light-body-bg});
+  box-shadow: 0 0 0 $switcher-padding var(--switcher-box-shadow, #{$light-switcher-box-shadow});
+
+  transition: 220ms ease-in-out;
+}
+
+.switcher__icon {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+
+  &--status {
+    position: absolute;
+    top: $switcher-padding;
+    left: $switcher-padding;
+
+    width: 2em;
+    height: 2em;
+
+    transition: transform 0.1s ease-in;
+  }
+}
+
+.switcher__radio:focus {
+  outline: none;
+}
+
+.switcher__radio:focus ~ .switcher__status {
+  outline: 0.2em solid var(--focus-visible, #{$light-focus-visible});
+}
+
+.switcher__radio:focus:not(:focus-visible) ~ .switcher__status {
+  outline: none;
+}
+
+.switcher__radio:focus-visible ~ .switcher__status {
+  outline: 0.2em solid var(--focus-visible, #{$light-focus-visible});
+}
+
+.switcher__radio--light:checked ~ .switcher__status .switcher__icon--status {
+  transform: translateX(0);
+}
+
+.switcher__radio--auto:checked ~ .switcher__status .switcher__icon--status {
+  transform: translateX(2em);
+}
+
+.switcher__radio--dark:checked ~ .switcher__status .switcher__icon--status {
+  transform: translateX(4em);
+}
+
+@media (min-width: $desktop-width) {
+  .switcher {
+    top: -5em;
+  }
+}

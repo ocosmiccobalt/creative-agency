@@ -1,4 +1,5 @@
 import Nav from './nav.js';
+import ColorSchemeSwitcher from './color-scheme-switcher.js';
 import replaceAnchorsWithButtons from './util/replaceAnchorsWithButtons.js';
 
 const init = (Component, elemSelector, ...rest) => {
@@ -12,6 +13,7 @@ const init = (Component, elemSelector, ...rest) => {
 
 const work = () => {
   init(Nav, `.main-nav`, `main-nav__toggle`, `site-list`);
+  init(ColorSchemeSwitcher, `.switcher`);
   replaceAnchorsWithButtons();
 };
 
