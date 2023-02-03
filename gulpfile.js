@@ -137,7 +137,10 @@ export function html() {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true
+    }))
     .pipe(gulp.dest("build"));
 }
 
