@@ -149,6 +149,21 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .page-footer__section {
+    width: 50%;
+    padding-right: 1.25em;
+
+    &--policies {
+      margin-right: 0;
+    }
+
+    &--company {
+      padding-left: 0;
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .page-footer {
     display: flex;
@@ -194,12 +209,10 @@
 
     &--policies {
       width: 25.356%;
-      margin-right: 0;
     }
 
     &--company {
       width: 18.228%;
-      padding-left: 0;
     }
 
     &--contact {
