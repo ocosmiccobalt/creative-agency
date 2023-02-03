@@ -156,14 +156,17 @@
 
 @media (min-width: $tablet-width) {
   .services__title {
-    max-width: $large-mobile-width;
+    max-width: 70%;
   }
 
   .services__subtitle {
-    max-width: $large-mobile-width;
+    max-width: 70%;
   }
 
   .services__description {
+    max-width: 42.75em;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 1em;
   }
 
@@ -258,6 +261,8 @@
     flex-basis: auto;
 
     max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
     margin-bottom: 1.6em;
 
     text-align: left;

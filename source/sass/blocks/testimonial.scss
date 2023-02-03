@@ -34,6 +34,16 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .testimonial__title {
+    max-width: 70%;
+  }
+
+  .testimonial__subtitle {
+    max-width: 70%;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .testimonial__wrapper {
     position: relative;
@@ -61,14 +71,6 @@
       right: -0.875em;
       bottom: 4.125em;
     }
-  }
-
-  .testimonial__title {
-    max-width: 70%;
-  }
-
-  .testimonial__subtitle {
-    max-width: 70%;
   }
 
   .testimonial__list {

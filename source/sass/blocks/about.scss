@@ -66,6 +66,20 @@
 }
 
 @media (min-width: $tablet-width) {
+  .about__title {
+    max-width: 70%;
+  }
+
+  .about__subtitle {
+    max-width: 70%;
+  }
+
+  .about__description {
+    max-width: 42.75em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .about__illustration {
     max-width: 46.188em;
   }
@@ -86,6 +100,7 @@
     flex-basis: auto;
 
     width: 70%;
+    max-width: none;
   }
 
   .about__subtitle {
@@ -93,6 +108,7 @@
     flex-basis: auto;
 
     width: 70%;
+    max-width: none;
     margin-bottom: 0.709em;
   }
 
@@ -110,6 +126,7 @@
   }
 
   .about__description {
+    max-width: 34.2em;
     margin-bottom: 1.2em;
   }
 

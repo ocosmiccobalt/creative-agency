@@ -173,6 +173,22 @@
   margin-bottom: 0.313rem;
 }
 
+@media (min-width: $tablet-width) {
+  .portfolio__title {
+    max-width: 70%;
+  }
+
+  .portfolio__subtitle {
+    max-width: 70%;
+  }
+
+  .portfolio__description {
+    max-width: 42.75em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .portfolio__wrapper {
     position: relative;
@@ -207,19 +223,12 @@
     }
   }
 
-  .portfolio__title {
-    max-width: 70%;
-  }
-
   .portfolio__subtitle {
-    max-width: 70%;
     margin-bottom: 0.564em;
   }
 
   .portfolio__description {
     max-width: 34.2em;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 2.5em;
   }
 
