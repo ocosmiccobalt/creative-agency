@@ -58,10 +58,16 @@
   border-radius: 0.75em;
 }
 
+@media (min-width: $large-mobile-width) {
+  .about__illustration {
+    max-width: 26.625em;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .about__illustration {
     max-width: 46.188em;
-    margin: 0 auto;
   }
 
   .about__image {

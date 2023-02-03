@@ -76,14 +76,20 @@
   border-radius: 1em;
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $large-mobile-width) {
   .collaboration__inner--img {
     align-self: center;
 
     width: 100%;
-    max-width: 36.688em;
+    max-width: 28.75em;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .collaboration__inner--img {
+    max-width: 36.688em;
   }
 
   .collaboration__illustration {

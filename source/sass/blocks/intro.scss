@@ -197,6 +197,15 @@
   border-radius: 0.75em;
 }
 
+@media (min-width: $large-mobile-width) {
+  .intro__inner {
+    max-width: 27.25em;
+    margin: 0 auto;
+    padding-right: 0.313em;
+    padding-left: 0.313em;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .intro__description {
     margin-bottom: 1.75em;
@@ -207,7 +216,6 @@
 
   .intro__inner {
     max-width: 46.188em;
-    margin: 0 auto;
     padding-right: 0;
     padding-left: 0;
   }
