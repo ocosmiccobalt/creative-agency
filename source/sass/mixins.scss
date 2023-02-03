@@ -29,6 +29,10 @@
   text-align: center;
   color: var(--primary-color, #{$light-primary-color});
 
+  @media (min-width: $tablet-width) {
+    font-size: 1em;
+  }
+
   @media (min-width: $desktop-width) {
     margin-bottom: 0.667em;
 
