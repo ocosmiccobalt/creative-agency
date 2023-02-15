@@ -22,6 +22,35 @@
 
     background-color: var(--footer-contrast, #{$light-footer-contrast});
   }
+
+  &[href] {
+    cursor: pointer;
+    transition: 220ms ease-in-out;
+  }
+
+  &--header:focus {
+    outline: 0.2em solid var(--focus-visible, #{$light-focus-visible});
+    outline-offset: 0.25em;
+  }
+
+  &--footer:focus {
+    outline: 0.2em solid $brand-blue;
+    outline-offset: 0.25em;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  &--header:focus-visible {
+    outline: 0.2em solid var(--focus-visible, #{$light-focus-visible});
+    outline-offset: 0.25em;
+  }
+
+  &--footer:focus-visible {
+    outline: 0.2em solid $brand-blue;
+    outline-offset: 0.25em;
+  }
 }
 
 .logo__image {
