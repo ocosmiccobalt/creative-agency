@@ -1,7 +1,7 @@
 import getCoords from './util/getCoords.js';
 
 class Nav {
-  constructor(navElem, buttonClass, menuClass) {
+  constructor(navElem, buttonClass, menuClass, currentLinkClass) {
     this.navElem = navElem;
     this.buttonNoJSClass = `${buttonClass}--nojs`;
     this.menuNoJSClass = `${menuClass}--nojs`;
@@ -9,26 +9,32 @@ class Nav {
     this.menuOpenClass = `${menuClass}--open`;
     this.button = this.navElem.querySelector(`.${buttonClass}`);
     this.menu = this.navElem.querySelector(`.${menuClass}`);
+    this.links = (this.menu !== null) ? [...this.menu.querySelectorAll(`a[href]`)] : [];
+    this.currentLinkClass = currentLinkClass;
   }
 
   init() {
     if (this.button !== null && this.menu !== null) {
       // show button
       this.button.classList.remove(this.buttonNoJSClass);
+      // set initial `aria-expanded` value
       this.button.setAttribute(`aria-expanded`, false);
       // hide menu
       this.menu.classList.remove(this.menuNoJSClass);
-
       this.button.addEventListener(`click`, this.onButtonClick.bind(this));
 
-      this.innerLinks = this.menu.querySelectorAll(`a[href^='#']`);
+      this.handleCurrentLinkClass();
+      window.addEventListener(`hashchange`, this.onHashchange.bind(this));
 
-      this.innerLinks.forEach((link) => {
-        const href = link.getAttribute(`href`);
-        link.pageFragment = (href.length > 1) ? document.querySelector(href) : null;
+      this.links.forEach((link) => {
+        const htmlHref = link.getAttribute(`href`);
+        const pageFragment = (htmlHref[0] === `#` && htmlHref.length > 1) ?
+          document.querySelector(htmlHref) :
+          null;
 
-        if (link.pageFragment !== null) {
-          link.addEventListener(`click`, this.onLinkClick.bind(this));
+        if (pageFragment !== null) {
+          link.pageFragment = pageFragment;
+          link.addEventListener(`click`, this.onPageFragmentLinkClick.bind(this));
         }
       });
     }
@@ -43,7 +49,23 @@ class Nav {
     this.menu.classList.toggle(this.menuOpenClass);
   }
 
-  onLinkClick(evt) {
+  handleCurrentLinkClass () {
+    const loc = window.location;
+
+    this.links.forEach((link) => {
+      if (link.href === loc.href) {
+        link.classList.add(this.currentLinkClass);
+      } else {
+        link.classList.remove(this.currentLinkClass);
+      }
+    });
+  }
+
+  onHashchange () {
+    this.handleCurrentLinkClass();
+  }
+
+  onPageFragmentLinkClick(evt) {
     const target = evt.currentTarget;
     const linkedFragmentCoords = getCoords(target.pageFragment);
     const menuCoords = getCoords(this.menu);

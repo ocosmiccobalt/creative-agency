@@ -12,7 +12,7 @@ const init = (Component, elemSelector, ...rest) => {
 };
 
 const work = () => {
-  init(Nav, `.main-nav`, `main-nav__toggle`, `site-list`);
+  init(Nav, `.main-nav`, `main-nav__toggle`, `site-list`, `site-list__link--current`);
   init(ColorSchemeSwitcher, `.switcher`);
   replaceAnchorsWithButtons();
 };
