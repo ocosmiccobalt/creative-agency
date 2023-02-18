@@ -95,7 +95,23 @@
     background-color: transparent;
 
     &--current {
+      position: relative;
+
       font-weight: 700;
+    }
+
+    &--current::after {
+      content: "";
+
+      position: absolute;
+      bottom: 0;
+      left: 40%;
+
+      width: 0.313em;
+      height: 0.313em;
+
+      border-radius: 50%;
+      background-color: var(--red, #{$red});
     }
   }
 }
