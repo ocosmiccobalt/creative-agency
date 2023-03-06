@@ -11,6 +11,9 @@ env:
 extends:
   "htmlacademy/vanilla"
 
+ignorePatterns:
+  - "gulpfile.js"
+
 rules:
   quotes:
     - error
