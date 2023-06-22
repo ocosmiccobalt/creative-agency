@@ -10,7 +10,8 @@
     "eslint": "eslint source/js/",
     "test": "npm run editorconfig && npm run stylelint && npm run eslint",
     "build": "gulp buildProd",
-    "start": "gulp"
+    "start": "gulp",
+    "deploy": "npm run build && gulp deploy"
   },
   "browserslist": [
     "last 2 versions",

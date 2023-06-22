@@ -16,6 +16,7 @@ import posthtml from "gulp-posthtml";
 import include from "posthtml-include";
 import htmlmin from "gulp-htmlmin";
 import webpack from "webpack-stream";
+import ghPages from "gh-pages";
 
 const webpackDevOptions = {
   mode: "development",
@@ -176,6 +177,10 @@ export function watch() {
   gulp.watch("source/sass/**/*.{scss,sass}", style);
   gulp.watch("source/*.html", gulp.series(html, reload));
   gulp.watch("source/js/**/*.js", gulp.series(jsDev, reload));
+}
+
+export function deploy(done) {
+  ghPages.publish("build", done);
 }
 
 export const buildProd = gulp.series(
