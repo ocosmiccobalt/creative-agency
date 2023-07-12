@@ -117,7 +117,11 @@ export function clean(done) {
 export function copy() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**"
+    "source/img/**",
+    "source/*.ico",
+    "source/*.png",
+    "source/*.svg",
+    "source/*.webmanifest"
   ], {
     base: "source"
   })
