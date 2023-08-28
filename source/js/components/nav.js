@@ -1,4 +1,4 @@
-import getCoords from './util/getCoords.js';
+import getCoords from '../util/getCoords.js';
 
 class Nav {
   constructor(navElem, buttonClass, menuClass, currentLinkClass) {

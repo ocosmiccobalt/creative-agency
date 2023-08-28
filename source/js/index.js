@@ -1,5 +1,5 @@
-import Nav from './nav.js';
-import ColorSchemeSwitcher from './color-scheme-switcher.js';
+import Nav from './components/nav.js';
+import ColorSchemeSwitcher from './components/color-scheme-switcher.js';
 import replaceAnchorsWithButtons from './util/replaceAnchorsWithButtons.js';
 
 const init = (Component, elemSelector, ...rest) => {
