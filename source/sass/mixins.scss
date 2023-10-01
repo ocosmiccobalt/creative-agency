@@ -88,22 +88,24 @@
   width: $width;
   height: $height;
 
-  background-image: radial-gradient(
-    circle at $r $r,
-    $color $sm-r,
-    rgba(255, 255, 255, 0) $r
-  );
+  background-image:
+    radial-gradient(
+      circle at $r $r,
+      $color $sm-r,
+      rgba(255, 255, 255, 0) $r
+    );
 
   background-size: $bg-size;
   background-repeat: repeat;
 
   @if $desktop-color-change {
     @media (min-width: $desktop-width) {
-      background-image: radial-gradient(
-        circle at $r $r,
-        $desktop-color-change $sm-r,
-        rgba(255, 255, 255, 0) $r
-      );
+      background-image:
+        radial-gradient(
+          circle at $r $r,
+          $desktop-color-change $sm-r,
+          rgba(255, 255, 255, 0) $r
+        );
     }
   }
 }

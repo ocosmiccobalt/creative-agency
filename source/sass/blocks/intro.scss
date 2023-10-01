@@ -25,28 +25,30 @@
     top: 15em;
     left: -0.188em;
 
-    background-image: linear-gradient(
-      180deg,
-      $faded-brand-blue,
-      $brand-blue
-    );
+    background-image:
+      linear-gradient(
+        180deg,
+        $faded-brand-blue,
+        $brand-blue
+      );
   }
 
   &::after {
     top: 1.125em;
     right: -0.5em;
 
-    background-image: linear-gradient(
-      180deg,
-      $rose,
-      #fe7e7e,
-      #fd6f6f,
-      #fc5f5f,
-      #fb5050,
-      #f94141,
-      #f83333,
-      $red
-    );
+    background-image:
+      linear-gradient(
+        180deg,
+        $rose,
+        #fe7e7e,
+        #fd6f6f,
+        #fc5f5f,
+        #fb5050,
+        #f94141,
+        #f83333,
+        $red
+      );
   }
 }
 
@@ -301,28 +303,30 @@
       top: 17.625em;
       left: -3.25em;
 
-      background-image: linear-gradient(
-        180deg,
-        $rose,
-        #fe7e7e,
-        #fd6f6f,
-        #fc5f5f,
-        #fb5050,
-        #f94141,
-        #f83333,
-        $red
-      );
+      background-image:
+        linear-gradient(
+          180deg,
+          $rose,
+          #fe7e7e,
+          #fd6f6f,
+          #fc5f5f,
+          #fb5050,
+          #f94141,
+          #f83333,
+          $red
+        );
     }
 
     &::after {
       top: 4.875em;
       right: -9.75em;
 
-      background-image: linear-gradient(
-        180deg,
-        $faded-brand-blue,
-        $brand-blue
-      );
+      background-image:
+        linear-gradient(
+          180deg,
+          $faded-brand-blue,
+          $brand-blue
+        );
     }
   }
 
