@@ -54,69 +54,15 @@
   }
 
   &--design-furniture {
-    background-image: url("../img/portfolio-design-furniture-app@1x.jpg");
-
-    /* stylelint-disable declaration-block-no-duplicate-properties, value-no-vendor-prefix */
-    background-image:
-      -webkit-image-set(
-        url("../img/portfolio-design-furniture-app@2x.jpg") 2x,
-        url("../img/portfolio-design-furniture-app@1x.jpg") 1x
-      );
-
-    background-image:
-      image-set(
-        url("../img/portfolio-design-furniture-app@2x.avif") type("image/avif") 2x,
-        url("../img/portfolio-design-furniture-app@1x.avif") type("image/avif") 1x,
-        url("../img/portfolio-design-furniture-app@2x.webp") type("image/webp") 2x,
-        url("../img/portfolio-design-furniture-app@1x.webp") type("image/webp") 1x,
-        url("../img/portfolio-design-furniture-app@2x.jpg") 2x,
-        url("../img/portfolio-design-furniture-app@1x.jpg") 1x
-      );
-    /* stylelint-enable declaration-block-no-duplicate-properties, value-no-vendor-prefix */
+    @include image-set("portfolio-design-furniture-app");
   }
 
   &--cloud {
-    background-image: url("../img/portfolio-cloud-app@1x.jpg");
-
-    /* stylelint-disable declaration-block-no-duplicate-properties, value-no-vendor-prefix */
-    background-image:
-      -webkit-image-set(
-        url("../img/portfolio-cloud-app@2x.jpg") 2x,
-        url("../img/portfolio-cloud-app@1x.jpg") 1x
-      );
-
-    background-image:
-      image-set(
-        url("../img/portfolio-cloud-app@2x.avif") type("image/avif") 2x,
-        url("../img/portfolio-cloud-app@1x.avif") type("image/avif") 1x,
-        url("../img/portfolio-cloud-app@2x.webp") type("image/webp") 2x,
-        url("../img/portfolio-cloud-app@1x.webp") type("image/webp") 1x,
-        url("../img/portfolio-cloud-app@2x.jpg") 2x,
-        url("../img/portfolio-cloud-app@1x.jpg") 1x
-      );
-    /* stylelint-enable declaration-block-no-duplicate-properties, value-no-vendor-prefix */
+    @include image-set("portfolio-cloud-app");
   }
 
   &--design-byte {
-    background-image: url("../img/portfolio-design-byte-app@1x.jpg");
-
-    /* stylelint-disable declaration-block-no-duplicate-properties, value-no-vendor-prefix */
-    background-image:
-      -webkit-image-set(
-        url("../img/portfolio-design-byte-app@2x.jpg") 2x,
-        url("../img/portfolio-design-byte-app@1x.jpg") 1x
-      );
-
-    background-image:
-      image-set(
-        url("../img/portfolio-design-byte-app@2x.avif") type("image/avif") 2x,
-        url("../img/portfolio-design-byte-app@1x.avif") type("image/avif") 1x,
-        url("../img/portfolio-design-byte-app@2x.webp") type("image/webp") 2x,
-        url("../img/portfolio-design-byte-app@1x.webp") type("image/webp") 1x,
-        url("../img/portfolio-design-byte-app@2x.jpg") 2x,
-        url("../img/portfolio-design-byte-app@1x.jpg") 1x
-      );
-    /* stylelint-enable declaration-block-no-duplicate-properties, value-no-vendor-prefix */
+    @include image-set("portfolio-design-byte-app");
   }
 
   &::after {

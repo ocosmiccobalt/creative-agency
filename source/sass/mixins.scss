@@ -109,3 +109,25 @@
     }
   }
 }
+
+@mixin image-set($name, $raster-type: "jpg") {
+  background-image: url("../img/#{$name}@1x.#{$raster-type}");
+
+  /* stylelint-disable declaration-block-no-duplicate-properties, value-no-vendor-prefix */
+  background-image:
+    -webkit-image-set(
+      url("../img/#{$name}@2x.#{$raster-type}") 2x,
+      url("../img/#{$name}@1x.#{$raster-type}") 1x
+    );
+
+  background-image:
+    image-set(
+      url("../img/#{$name}@2x.avif") type("image/avif") 2x,
+      url("../img/#{$name}@1x.avif") type("image/avif") 1x,
+      url("../img/#{$name}@2x.webp") type("image/webp") 2x,
+      url("../img/#{$name}@1x.webp") type("image/webp") 1x,
+      url("../img/#{$name}@2x.#{$raster-type}") 2x,
+      url("../img/#{$name}@1x.#{$raster-type}") 1x
+    );
+  /* stylelint-enable declaration-block-no-duplicate-properties, value-no-vendor-prefix */
+}
