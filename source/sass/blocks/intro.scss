@@ -86,8 +86,20 @@
 @supports (display: grid) {
   .intro__inner {
     display: grid;
-    grid-template-columns: [illustration-start] minmax(0, 1fr) [review-start] min-content [review-end illustration-end];
-    grid-template-rows: [illustration-start] min-content [review-start] 2.375em [illustration-end] min-content [review-end];
+    grid-template-columns:
+      [illustration-start]
+      minmax(0, 1fr)
+      [review-start]
+      min-content
+      [review-end illustration-end];
+    grid-template-rows:
+      [illustration-start]
+      min-content
+      [review-start]
+      2.375em
+      [illustration-end]
+      min-content
+      [review-end];
   }
 }
 
@@ -124,8 +136,20 @@
 @supports (display: grid) {
   .intro__illustration {
     display: grid;
-    grid-template-columns: [rating-start hero-start] min-content [rating-end] minmax(0, 1fr) [hero-end];
-    grid-template-rows: [rating-start] min-content [hero-start] 2.375em [rating-end] min-content [hero-end];
+    grid-template-columns:
+      [rating-start hero-start]
+      min-content
+      [rating-end]
+      minmax(0, 1fr)
+      [hero-end];
+    grid-template-rows:
+      [rating-start]
+      min-content
+      [hero-start]
+      2.375em
+      [rating-end]
+      min-content
+      [hero-end];
     grid-area: illustration;
   }
 }
@@ -224,7 +248,14 @@
 
   @supports (display: grid) {
     .intro__inner {
-      grid-template-rows: [illustration-start] min-content [review-start] 3.688em [illustration-end] min-content [review-end];
+      grid-template-rows:
+        [illustration-start]
+        min-content
+        [review-start]
+        3.688em
+        [illustration-end]
+        min-content
+        [review-end];
     }
   }
 
@@ -332,7 +363,14 @@
 
   @supports (display: grid) {
     .intro__inner {
-      grid-template-rows: [illustration-start] min-content [review-start] 9.938em [illustration-end] min-content [review-end];
+      grid-template-rows:
+        [illustration-start]
+        min-content
+        [review-start]
+        9.938em
+        [illustration-end]
+        min-content
+        [review-end];
     }
   }
 
@@ -353,7 +391,12 @@
 
   @supports (display: grid) {
     .intro__illustration {
-      grid-template-rows: [rating-start hero-start] 7.438em [rating-end] min-content [hero-end];
+      grid-template-rows:
+        [rating-start hero-start]
+        7.438em
+        [rating-end]
+        min-content
+        [hero-end];
 
       padding-top: 3.063em;
     }
